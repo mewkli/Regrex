@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regex Tester</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1>Regex Tester</h1>
+        <div class="form">
+            <form action="{{url_for('index_func')}}" method="post">
+                <ul class="form-style-1">
+                    <li><label>Test String<span class="required">*</span>
+                        <input type="text" id="testString" placeholder="Enter test string...">
+                    </li>
+                    <li>
+                        <label>Regular Expression<span class="required">*</span>
+                            <input type="text" id="regex" placeholder="Enter regular expression...">
+                            <button type="submit">Submit</button>
+                    </li>
+                </ul>
+                </form>
+        </div>
+        <div id="matches">
+            <h2>Matches:</h2>
+            <ul id="matchesList"></ul>
+        </div>
+    </div>
+</body>
+</html>
